@@ -49,7 +49,6 @@ const Preloader = /** @constructor */ function () { // eslint-disable-line no-un
 	}
 
 	function loadFetch(file, tracker, fileSize, raw) {
-		if (file.substr(-5) === '.wasm' || file.substr(-4) === '.pck') { file += '.gz'; var resolve_orig = resolve; resolve = function(xhr) { return resolve_orig(xhr.responseURL.substr(-3) === '.gz' ? { response: pako.inflate(xhr.response), responseType: xhr.responseType, responseURL: xhr.responseURL, status: xhr.status, statusText: xhr.statusText } : xhr); }; }
 		tracker[file] = {
 			total: fileSize || 0,
 			loaded: 0,
