@@ -7,17 +7,17 @@
                 <meta charset="UTF-8" />
                 <meta name="node_id" content="réparer les éclairages d'un vélo de recyclerie avec l'impression 3d !">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <link rel="shortcut icon" href="/minihub/favicon.ico" />
+                <link rel="shortcut icon" href="/favicon.ico" />
 
                 <!-- Set title -->
                 <title>SKU_ObsidianHTML/Documentations/Guillivigne</title>
 
                 <!-- Includes -->
-                <link rel="stylesheet" href="minihub/obsidian.css"/>
-<script src="/minihub/obs.html/static/obsidian_core.js"></script>
-<script src="/minihub/obs.html/static/encoding.js"></script>
-<link rel="stylesheet" href="/minihub/obs.html/static/master.css" />
-<script src="/minihub/obs.html/static/mermaid.9.0.1.min.js"></script>
+                <link rel="stylesheet" href="obsidian.css"/>
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
 <script>
   MathJax = {
     loader: {
@@ -39,13 +39,13 @@
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
-<script src="/minihub/obs.html/static/dirtree.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
 
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = "réparer les éclairages d'un vélo de recyclerie avec l'impression 3d !";
-                        const HTML_URL_PREFIX = '/minihub';
+                        const CURRENT_NODE = 'réparer les éclairages d'un vélo de recyclerie avec l'impression 3d !';
+                        const HTML_URL_PREFIX = '';
                         const PAGE_DEPTH = 2;
                 </script>
         </head>
@@ -60,7 +60,7 @@
         <div id="page_holder" class="flex_col">
                 <div id="header" class="header">
                         <div id="header_flex" class="flex_row">
-                                <a href="/minihub/index.html" id="homelink" title="Clear screen and go to homepage">SKU_ObsidianHTML/Documentations/Guillivigne</a>
+                                <a href="/index.html" id="homelink" title="Clear screen and go to homepage">SKU_ObsidianHTML/Documentations/Guillivigne</a>
                                 <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
                                         ≡
                                 </div>
@@ -87,18 +87,18 @@
                                 <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
                                 <div id="left_pane_content" class="left_pane_content">
                                         <div class="dirtree"><button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">Articles Guillivigne</button>
-<div id="folder-container-1" class="dir-container requires_js active" path="/minihub/Articles Guillivigne">
+<div id="folder-container-1" class="dir-container requires_js active" path="/Articles Guillivigne">
 	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">Impression 3D</button>
-	<div id="folder-container-2" class="dir-container requires_js active" path="/minihub/Articles Guillivigne/Impression 3D">
+	<div id="folder-container-2" class="dir-container requires_js active" path="/Articles Guillivigne/Impression 3D">
 		<ul class="dir-list">
-			<li><a class="" href="/minihub/Articles Guillivigne/Impression 3D/Réparer les éclairages d'un vélo de recyclerie avec l'impression 3D !.html"  >Réparer les éclairages d'un vélo de recyclerie avec l'impression 3D !</a></li>
+			<li><a class="active" href="/Articles Guillivigne/Impression 3D/Réparer les éclairages d'un vélo de recyclerie avec l'impression 3D !.html"  >Réparer les éclairages d'un vélo de recyclerie avec l'impression 3D !</a></li>
 		</ul>
 	</div>
 	<ul class="dir-list">
 	</ul>
 </div>
 <ul class="dir-list">
-	<li><a class="" href="/minihub/index.html"  >Accueil</a></li>
+	<li><a class="" href="/index.html"  >Accueil</a></li>
 </ul>
 </div>
                                 </div>
@@ -123,7 +123,7 @@
 </ul>
 </div>
 <p>L’impression 3D a de nombreuses applications, on peut imprimer toutes sortes d’objets à but ludique, décoratif, mais aussi se servir de cet outil pour les <strong>réparer</strong> soi-même. En effet, avec un peu de patience et d’apprentissage, on peut concevoir ses propres pièces pour remplacer ou même améliorer les anciennes. Cela permet non seulement de faire des économies mais également d’éviter de jeter ce qui pourrait être réparé. On utilisera <a href="https://www.freecadweb.org/?lang=fr" class="external-link"><strong>Freecad</strong></a>, un logiciel CAO(<em>Conception Assistée par Ordinateur</em>) libre et gratuit qui permet de concevoir et modéliser en 3D les objets à imprimer !   </p>
-<p><img alt="" src="/minihub/Articles%20Guillivigne/Impression%203D/media/FreeCAD02_screen.png" />   </p>
+<p><img alt="" src="/Articles%20Guillivigne/Impression%203D/media/FreeCAD02_screen.png" />   </p>
 <div class="caption">Interface personnalisée de FreeCAD 0.2</div>
 
 <p><br>   </p>
@@ -133,7 +133,7 @@
 <h1 id="conception">Conception</h1>
 <p><strong>C'est parti pour le feu avant !</strong> Il se compose en deux parties, la première <em><strong>A</strong></em> sert à accueillir l'ampoule, à positionner le phare sur le cadre du vélo et vient se verrouiller avec une rotation et une vis dans la partie <em><strong>B</strong></em>, qui diffuse et amplifie la lumière émise. <br />
 Comme l'ampoule est remplacée par une LED blanche, il faut créer un boîtier pouvant contenir sa carte électronique, 2 piles CR2032 et un peu de place pour un bouton poussoir. Et lui ajouter le mécanisme d'insertion et de verrouillage ainsi que le trou qui permet de faire passer la vis pour fixer le tout au cadre <em>(voir en dessous, à droite)</em>.   </p>
-<p><img alt="" src="/minihub/Articles%20Guillivigne/Impression%203D/media/BP_eclairage_avant.jpg" />   </p>
+<p><img alt="" src="/Articles%20Guillivigne/Impression%203D/media/BP_eclairage_avant.jpg" />   </p>
 <p><br/>   </p>
 <p>Nous commencerons par modéliser les éléments intérieurs, ce qui nous donnera une idée des dimensions nécessaires pour le boîtier. <br />
 <br/>   </p>
@@ -143,7 +143,7 @@ Comme l'ampoule est remplacée par une LED blanche, il faut créer un boîtier p
 <p>Voici le résultat, avec cette forme il suffit seulement de l'insérer !   </p>
 <p><strong>Modèle 3D :</strong>   </p>
 <iframe src="https://viewscreen.githubusercontent.com/view/solid?url=https%3a%2f%2fraw.githubusercontent.com%2fskurdh%2fskurdh.github.io%2fmain%2fminihub%2fattachements%2fSTL%2fSupportPCB.stl" title="SupportPCB.stl" width="620" height="420" frameborder="0"></iframe>
-
+<p><br />   </p>
 <div class="callout callout-info active" rasa="1">
 <div class="callout-title">
 <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
@@ -167,13 +167,13 @@ Nous avons besoin d'accueillir 2 piles en série, superposées l'une sur l'autre
 Nous devons aussi prévoir 2 emplacements pour insérer les petits bras métalliques qui feront contact avec le (-) et le (+) pour faire passer le courant.  <br />
 <br/>   </p>
 <p>Après quelques essais, voilà le résultat :   </p>
-<p><img alt="" src="/minihub/Articles%20Guillivigne/Impression%203D/media/schema_support_pile.png" />   </p>
+<p><img alt="" src="/Articles%20Guillivigne/Impression%203D/media/schema_support_pile.png" />   </p>
 <p><strong>Modèle 3D :</strong>   </p>
 <iframe src="https://viewscreen.githubusercontent.com/view/solid?url=https%3a%2f%2fraw.githubusercontent.com%2fskurdh%2fskurdh.github.io%2fmain%2fminihub%2fattachements%2fSTL%2fBatteryHolder.stl" title="BatteryHolder.stl" width="620" height="420" frameborder="0"></iframe>
 
 <h2 id="le-boitier">Le boîtier</h2>
 <p>Maintenant que nous savons ce que l'on va mettre dedans, nous allons dessiner sa forme. Il faut bien entendu prendre en compte certaines contraintes mais nous pouvons laisser place à un peu de créativité.    </p>
-<p><img alt="" src="/minihub/Articles%20Guillivigne/Impression%203D/media/boitier_angles.png" />   </p>
+<p><img alt="" src="/Articles%20Guillivigne/Impression%203D/media/boitier_angles.png" />   </p>
 <p>Nous avons :   </p>
 <ul>
 <li>Reproduit le mécanisme d'insertion de la partie <em><strong>A</strong></em>. <mark class="formatting_highlight">[1]</mark>   </li>
@@ -188,14 +188,14 @@ Nous devons aussi prévoir 2 emplacements pour insérer les petits bras métalli
 
 <h2 id="le-couvercle">Le couvercle</h2>
 <p>Et nous voilà arrivés à la conception de la dernière pièce ! L'idée est de créer un couvercle en 2 parties. La première va se visser directement sur le boîtier, elle protégera de la pluie les pièces à l'intérieur. Pour faciliter le remplacement des piles <em>(et éviter de devoir dévisser à chaque fois, ce qui abîmerait le plastique sur le long terme)</em>, nous allons créer un trou au milieu qui viendra accueillir la deuxième pièce, un autre couvercle, rond qu'il faudra faire tourner avec une pièce ou même une pile pour ouvrir/fermer l'accès.    </p>
-<p><img alt="" src="/minihub/Articles%20Guillivigne/Impression%203D/media/schema_couvercle.png" />   </p>
+<p><img alt="" src="/Articles%20Guillivigne/Impression%203D/media/schema_couvercle.png" />   </p>
 <p><strong>Modèles 3D :</strong>   </p>
 <iframe src="https://viewscreen.githubusercontent.com/view/solid?url=https%3a%2f%2fraw.githubusercontent.com%2fskurdh%2fskurdh.github.io%2fmain%2fminihub%2fattachements%2fSTL%2fCase_Lid_Hole.stl" title="Case_Lid_Hole.stl" width="620" height="420" frameborder="0"></iframe>
 <p><br />   </p>
 <iframe src="https://viewscreen.githubusercontent.com/view/solid?url=https%3a%2f%2fraw.githubusercontent.com%2fskurdh%2fskurdh.github.io%2fmain%2fminihub%2fattachements%2fSTL%2fBatteryLid.stl" title="BatteryLid.stl" width="620" height="420" frameborder="0"></iframe>
 
 <p>Et voila le rendu 3D final, il ne nous reste plus qu'à imprimer chacune des pièces à l'aide des imprimantes 3D du Minihub, faire le montage et un peu d'électronique ! Mais nous verrons ça dans le chapitre suivant.   </p>
-<p><img alt="" src="/minihub/Articles%20Guillivigne/Impression%203D/media/FinalBoitier.png" />   </p>
+<p><img alt="" src="/Articles%20Guillivigne/Impression%203D/media/FinalBoitier.png" />   </p>
 <p><strong>Modèle 3D :</strong>   </p>
 <iframe src="https://viewscreen.githubusercontent.com/view/solid?url=https%3a%2f%2fraw.githubusercontent.com%2fskurdh%2fskurdh.github.io%2fmain%2fminihub%2fattachements%2fSTL%2fWhiteLightAll.stl" title="WhiteLightAll.stl" width="620" height="420" frameborder="0"></iframe>
 
@@ -213,15 +213,15 @@ Nous devons aussi prévoir 2 emplacements pour insérer les petits bras métalli
 </p>
 </div>
 </div>
-<p><img alt="" src="/minihub/Articles%20Guillivigne/Impression%203D/media/BP_supports_imprim%C3%A9s.jpg" />   </p>
+<p><img alt="" src="/Articles%20Guillivigne/Impression%203D/media/BP_supports_imprim%C3%A9s.jpg" />   </p>
 <p>Le support de la LED et des piles ont été collés ensemble, et il a fallu faire quelques soudures pour relier les bornes des piles ainsi que le bouton poussoir à la carte électronique.   </p>
-<p><img alt="" src="/minihub/Articles%20Guillivigne/Impression%203D/media/BP_boitier_imprimes.jpg" />   </p>
+<p><img alt="" src="/Articles%20Guillivigne/Impression%203D/media/BP_boitier_imprimes.jpg" />   </p>
 <p>Les supports ont été insérés dans le boitier, tout rentre et est parfaitement maintenu.   </p>
-<p><img alt="" src="/minihub/Articles%20Guillivigne/Impression%203D/media/BP_boitier_couvercles.jpg" />   </p>
+<p><img alt="" src="/Articles%20Guillivigne/Impression%203D/media/BP_boitier_couvercles.jpg" />   </p>
 <p>Il ne reste plus qu'à fermer le tout ! <strong>Et c'est terminé !</strong>   </p>
-<p><img alt="" src="/minihub/Articles%20Guillivigne/Impression%203D/media/BP_feu_avant.jpg" />   </p>
+<p><img alt="" src="/Articles%20Guillivigne/Impression%203D/media/BP_feu_avant.jpg" />   </p>
 <p>Nous pouvons maintenant passer à l'éclairage arrière. Cette fois ci, il y a beaucoup moins de place comme il faut tout faire rentrer dans le boîtier à cause de son emplacement sur le vélo. Voilà le résultat :   </p>
-<p><img alt="" src="/minihub/Articles%20Guillivigne/Impression%203D/media/BP_feu_arriere.jpg" />   </p>
+<p><img alt="" src="/Articles%20Guillivigne/Impression%203D/media/BP_feu_arriere.jpg" />   </p>
 <h1 id="rendu-final">Rendu final</h1>
 <ul>
 <li>Parler vite fait du vélo.   </li>
@@ -367,7 +367,7 @@ Nous devons aussi prévoir 2 emplacements pour insérer les petits bras métalli
                 document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
         </script>
 
-        <script src="/minihub/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+        <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
 
         
 
