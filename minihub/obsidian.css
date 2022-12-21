@@ -1,0 +1,31 @@
+img, iframe {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content > * {
+    margin: auto auto !important;
+}
+
+.caption {
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+img[alt="leftimg"] {
+    float: left;
+    margin: 0 15px 0 0 !important;
+}
+
+.righttext {
+    margin: 0 0 0 15px;
+    /* padding: ; */
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(231, 231, 231);
+}
