@@ -27,7 +27,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Roboto-Regular";
     color: rgb(var(--normal-text-color));
     margin: 0rem;
     background-color: rgb(var(--loading-bg-color));
