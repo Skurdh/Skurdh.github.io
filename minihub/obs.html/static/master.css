@@ -82,7 +82,7 @@ blockquote p {
 .container_content {
     display: block;
     margin: 0 auto;
-    width: 53%;
+    width: 62%;
 }
 .container_filler {
     background-color: var(--bg-note);
@@ -144,6 +144,7 @@ blockquote p {
 .active .right_pane_content,
 .active .left_pane_content {
     display: block;
+    max-width: 300px;
 }
 
 
