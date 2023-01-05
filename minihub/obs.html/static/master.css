@@ -51,21 +51,21 @@ body {
 
 @font-face {
     font-family: 'SourceCodePro-Regular';
-    src: url('minihub/obs.html/static/SourceCodePro-Regular.ttf') format('truetype');
+    src: url('/minihub/obs.html/static/SourceCodePro-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: monospace;
 }
 
 @font-face {
     font-family: 'Roboto-Regular';
-    src: url('minihub/obs.html/static/Roboto-Regular.ttf') format('truetype');
+    src: url('/minihub/obs.html/static/Roboto-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto-Medium';
-    src: url('minihub/obs.html/static/Roboto-Medium.ttf') format('truetype');
+    src: url('/minihub/obs.html/static/Roboto-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -1988,7 +1988,7 @@ body {
 
 
 .external-link::after {
-    background: transparent url(minihub/obs.html/static/external.svg) 0 0 no-repeat;
+    background: transparent url(/minihub/obs.html/static/external.svg) 0 0 no-repeat;
     background-size: auto;
     background-size: 16px;
     content: "";
@@ -2347,7 +2347,7 @@ h1 {
 }
 
 #page_holder {
-    background: url("minihub/obs.html/static/header_background.jpg") repeat-x center top;
+    background: url("/minihub/obs.html/static/header_background.jpg") repeat-x center top;
     background-color: var(--custom-color);
     color: rgb(var(--normal-text-color));
 }
@@ -2409,7 +2409,7 @@ blockquote {
 /*  ----------------------------------------- /OVERWRITES ------------------------------------------------ */
 @font-face {
     font-family: 'Subatomic';
-    src: url('minihub/obs.html/static/subatomic.tsoonami.ttf') format('truetype');
+    src: url('/minihub/obs.html/static/subatomic.tsoonami.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -2422,7 +2422,7 @@ blockquote {
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
-    background: url("minihub/obs.html/static/craie.png") repeat center center;
+    background: url("/minihub/obs.html/static/craie.png") repeat center center;
 	color: #fff;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
@@ -2454,11 +2454,11 @@ blockquote {
 }
 
 .icon-tray .light {
-    background: url("minihub/obs.html/static/light_mode.png") no-repeat;
+    background: url("/minihub/obs.html/static/light_mode.png") no-repeat;
 }
 
 .icon-tray .dark {
-    background: url("minihub/obs.html/static/dark_mode.png") no-repeat;
+    background: url("/minihub/obs.html/static/dark_mode.png") no-repeat;
 }
 
 .icon-tray div a img {
