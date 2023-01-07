@@ -10,7 +10,7 @@ var CONFIGURED_HTML_URL_PREFIX = "/minihub";
 var RELATIVE_PATHS = 0;
 var documentation_mode = 1;
 var tab_mode = !no_tab_mode;
-var gzip_hash = '116119376606317734353439200218620043784'                       // used to check whether the localStorage data is stale
+var gzip_hash = '133745957877842752797413370073947793496'                       // used to check whether the localStorage data is stale
 
 // global cache
 var fn_cache_ls_available = null;
@@ -198,7 +198,7 @@ function load_page() {
                     let levelcont = document.getElementsByClassName("container")[0];
                     var el = levelcont.querySelectorAll(link.replaceAll(':', '\\:'))[0];
                     if (el) {
-                        getParentContainer(el).scrollTop = el.offsetTop - rem(6);
+                        getParentContainer(el).scrollTop = el.offsetTop - rem(10);
                         el.classList.add('fade-it');
                         setTimeout(function() {
                             el.classList.remove('fade-it');

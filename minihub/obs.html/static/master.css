@@ -38,7 +38,7 @@ body {
 }
 
 .header {
-    padding-bottom: 2rem;
+    padding-bottom: 0.5rem;
 }
 .header.minimal-header {
     padding-bottom: 0rem;
@@ -562,7 +562,7 @@ h3+p {
     }
 }
 
-@media (max-width: 602px) {
+@media (max-width: 602px), (max-height: 602px) {
     .header {
         padding-bottom: 0.3rem;
     }
@@ -771,7 +771,7 @@ li {
 .dir-list li a.active:visited,
 .dir-list li a.active:link,
 .dir-list li a.active:hover {
-    color: var(--custom-color);
+    color: rgb(60, 158, 255);
     font-weight: bold;
 }
 .dir-button.folder_note.active {
@@ -2019,6 +2019,7 @@ span.tag {
 .container .content {
     margin: 0 auto;
     width: 64%;
+    padding-top: 1.5rem;
 }
 
 @media (max-width: 840px) {
@@ -2045,7 +2046,7 @@ span.tag {
     
 }
 
-@media (max-width: 602px) {
+@media (max-width: 602px), (max-height: 602px) {
     #header_flex {
         flex-direction: column;
         margin-top: -1rem;
@@ -2171,7 +2172,7 @@ span.tag {
 .theme-obs-dark .header {
     margin: 0rem;
     margin-top: 0rem;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     /* background-color: var(--header-bg); */
 }
 
@@ -2256,7 +2257,7 @@ span.tag {
 
 .theme-obs-light .icon-tray,
 .theme-obs-dark .icon-tray {
-    margin-bottom: 1rem;
+    /* margin-bottom: 0.5rem; */
     margin-top: 0px;
 }
 
@@ -2284,7 +2285,7 @@ span.tag {
 
 
 
-@media (max-width: 602px) {
+@media (max-width: 602px), (max-height: 602px) {
     .theme-obs-light .header {
         background-color: var(--custom-color);
     }
@@ -2481,4 +2482,22 @@ blockquote {
     #custom_homelink #custom-subtitle {
         display: none;
     }
+}
+
+.content img, iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .caption {
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.content .title {
+    font-size: 30px;
+    font-weight: bold;
+    
 }
