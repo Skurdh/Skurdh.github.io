@@ -10,7 +10,7 @@ var CONFIGURED_HTML_URL_PREFIX = "/minihub";
 var RELATIVE_PATHS = 0;
 var documentation_mode = 1;
 var tab_mode = !no_tab_mode;
-var gzip_hash = '249686557167399624127206041434542095664'                       // used to check whether the localStorage data is stale
+var gzip_hash = '317055114240842277762923334905779737832'                       // used to check whether the localStorage data is stale
 
 // global cache
 var fn_cache_ls_available = null;
