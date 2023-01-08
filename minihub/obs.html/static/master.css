@@ -23,7 +23,7 @@
     --callout-color: rgb(46, 51, 56);
     --callout-alpha: 0.1;
     --header-bg: #f6f7f8;
-    --code-hightlight-color: 157, 12, 255;
+    --code-hightlight-color: 60, 158, 255;
     --homelink-color: #2d68b1;
     --custom-color: #124478;
     --custom-rgb-color: 18, 68, 120;
@@ -2102,6 +2102,7 @@ span.tag {
     --divider-color: #b9b9b9;
     --header-bg: #f6f7f8;
     --homelink-color: #000000;
+    --code-hightlight-color: 60, 158, 255;
     --dir-tree-color: var(--color-accent);
     --marker-color: var(--divider-color);
 }
@@ -2119,7 +2120,7 @@ span.tag {
     --color-accent3: #2c2f33;
     --divider-color: #1a1a1a;
     --header-bg: #000000;
-    --code-hightlight-color: 200, 119, 255;
+    --code-hightlight-color: 60, 158, 255;
     --homelink-color: var(--color-accent3);
     --graph-bg: #161616;
     --dir-tree-color: var(--color-accent2);
