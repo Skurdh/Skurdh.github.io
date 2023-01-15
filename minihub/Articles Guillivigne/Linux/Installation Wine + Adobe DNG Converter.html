@@ -5,7 +5,7 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="index">
+                <meta name="node_id" content="installation wine + adobe dng converter">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="/minihub/favicon.ico" />
 
@@ -47,9 +47,9 @@
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = "index";
+                        const CURRENT_NODE = "installation wine + adobe dng converter";
                         const HTML_URL_PREFIX = "/minihub";
-                        const PAGE_DEPTH = 0;
+                        const PAGE_DEPTH = 2;
                 </script>
         </head>
 
@@ -151,7 +151,7 @@
                 }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/minihub/obs.html/graph/index.html?node=index" title="Ouvrir le Graph en pleine page">
+            <a id="graph_link" class="system-link" href="/minihub/obs.html/graph/index.html?node=installation wine + adobe dng converter" title="Ouvrir le Graph en pleine page">
                     <img class="graph_header_div_svg" src = "/minihub/obs.html/static/icon_graph.png" alt="Ouvrir le Graph en pleine page"/>
             </a>
         </div>
@@ -189,7 +189,7 @@
     <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
     <div id="left_pane_content" class="left_pane_content">
             <div class="dirtree"><button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">Articles Guillivigne</button>
-<div id="folder-container-1" class="dir-container requires_js " path="/minihub/Articles Guillivigne">
+<div id="folder-container-1" class="dir-container requires_js active" path="/minihub/Articles Guillivigne">
 	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">Impression 3D</button>
 	<div id="folder-container-2" class="dir-container requires_js " path="/minihub/Articles Guillivigne/Impression 3D">
 		<ul class="dir-list">
@@ -197,16 +197,16 @@
 		</ul>
 	</div>
 	<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">Linux</button>
-	<div id="folder-container-3" class="dir-container requires_js " path="/minihub/Articles Guillivigne/Linux">
+	<div id="folder-container-3" class="dir-container requires_js active" path="/minihub/Articles Guillivigne/Linux">
 		<ul class="dir-list">
-			<li><a class="" href="/minihub/Articles Guillivigne/Linux/Installation Wine + Adobe DNG Converter.html"  >Installation Wine + Adobe DNG Converter</a></li>
+			<li><a class="active" href="/minihub/Articles Guillivigne/Linux/Installation Wine + Adobe DNG Converter.html"  >Installation Wine + Adobe DNG Converter</a></li>
 		</ul>
 	</div>
 	<ul class="dir-list">
 	</ul>
 </div>
 <ul class="dir-list">
-	<li><a class="active" href="/minihub/index.html"  >Accueil</a></li>
+	<li><a class="" href="/minihub/index.html"  >Accueil</a></li>
 </ul>
 </div>
     </div>
@@ -216,36 +216,182 @@
                 <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
                     <div style="flex:1;display: none;"></div>
                     <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
-                        <a href="/minihub/" style="color: rgb(var(--normal-text-color));">Home</a> / <a href="/minihub/index.html" >index</a>
+                        <a href="/minihub/" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">Articles Guillivigne</span> / <span style="color: #666;">Linux</span> / <a href="/minihub/Articles Guillivigne/Linux/Installation Wine + Adobe DNG Converter.html" >Installation Wine + Adobe DNG Converter</a>
                     </div>
                 </div>
-<div class="content"><div class="title">Home</div>
-<hr />
-<p>Bienvenue sur la page d'accueil !   </p>
-<div class="callout callout-warning active" rasa="1">
-<div class="callout-title">
-<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-</div>
-<div class="callout-title-name">Warning
-</div>
-</div>
-<div class="callout-content">
-<p>Page en construction. <br />
-</p>
-</div>
-</div>
-<h1 id="sommaire">Sommaire</h1>
+<div class="content"><h1 id="installation-wine-adobe-dng-converter">Installation Wine + Adobe DNG Converter</h1>
 <div class="toc">
 <ul>
-<li><a href="#sommaire" class="anchor-link">Sommaire</a></li>
+<li><a href="#installation-wine-adobe-dng-converter" class="anchor-link">Installation Wine + Adobe DNG Converter</a><ul>
+<li><a href="#installation-wine" class="anchor-link">Installation Wine</a><ul>
+<li><a href="#wine-est-installe-mais-avec-une-version-8-0" class="anchor-link">Wine est installé mais avec une version &lt; 8.0</a></li>
+<li><a href="#sur-ubuntu" class="anchor-link">Sur Ubuntu</a></li>
+</ul>
+</li>
+<li><a href="#installation-adobe-dng" class="anchor-link">Installation Adobe DNG</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<ol>
-<li><a href="/minihub/Articles%20Guillivigne/Impression%203D/R%C3%A9parer%20les%20%C3%A9clairages%20d%27un%20v%C3%A9lo%20de%20recyclerie%20avec%20l%27impression%203D.html">Réparer les éclairages d'un vélo de recyclerie avec l'impression 3D</a>   </li>
-<li><a href="/minihub/Articles%20Guillivigne/Linux/Installation%20Wine%20%2B%20Adobe%20DNG%20Converter.html">Installation Wine + Adobe DNG Converter</a></li>
-</ol></div>
+<h2 id="installation-wine">Installation Wine</h2>
+<p>Vérifier si Wine est présent sur l'ordinateur et sa version   </p>
+<div class="lang-linux">
+
+<div class="codehilite"><pre><span></span><code>wine --version
+</code></pre></div>
+
+
+</div>
+
+<h3 id="wine-est-installe-mais-avec-une-version-8-0">Wine est installé mais avec une version &lt; 8.0</h3>
+<p>Désinstaller Wine   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo apt-get --purge remove wine
+</code></pre></div>
+
+
+</div>
+
+<p>Si le paquet wine n'est pas trouvé :   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo apt-get --purge remove winehq
+</code></pre></div>
+
+
+</div>
+
+<p>Ensuite :   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>rm -rf $HOME/.wine ; rm -f $HOME/.config/menus/applications-merged/*wine* ; rm -rf $HOME/.local/share/applications/wine ; rm -f $HOME/.local/share/desktop-directories/*wine* ; rm -f $HOME/.local/share/icons/*wine* ; sudo apt-get update
+</code></pre></div>
+
+
+</div>
+
+<h3 id="sur-ubuntu">Sur Ubuntu</h3>
+<p>Activer le mode 32 bit   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo dpkg --add-architecture i386
+</code></pre></div>
+
+
+</div>
+
+<p>Créer le dépot   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo mkdir -pm755 /etc/apt/keyrings
+
+sudo wget -O /etc/apt/keyrings/winehq-archive.key [https://dl.winehq.org/wine-builds/winehq.key](https://dl.winehq.org/wine-builds/winehq.key)
+</code></pre></div>
+
+
+</div>
+
+<p>Selon la version de Ubuntu :   </p>
+<ul>
+<li><strong>Ubuntu 22.04 / Mint 21.x</strong>   </li>
+</ul>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
+</code></pre></div>
+
+
+</div>
+
+<ul>
+<li><strong>Ubuntu 20.04 / Mint 20.x</strong>   </li>
+</ul>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources
+</code></pre></div>
+
+
+</div>
+
+<ul>
+<li><strong>Ubuntu 18.04 / Mint 19.x</strong>   </li>
+</ul>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/bionic/winehq-bionic.sources
+</code></pre></div>
+
+
+</div>
+
+<p>Mettre à jour   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo apt update
+</code></pre></div>
+
+
+</div>
+
+<p>Installer Wine   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo apt install --install-recommends winehq-devel
+</code></pre></div>
+
+
+</div>
+
+<h2 id="installation-adobe-dng">Installation Adobe DNG</h2>
+<p>Télécharger Adobe DNG 15.1 : <a href="https://www.adobe.com/go/dng_converter_win" class="external-link">https://www.adobe.com/go/dng_converter_win</a>   </p>
+<p>Mettre Wine en Windows 10 et le configurer :    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>WINEPREFIX=&quot;$HOME/wine-dng&quot; winecfg
+</code></pre></div>
+
+
+</div>
+
+<p>Dans Bibliothèques, copier dans <strong><mark class="formatting_highlight">Nouveau remplacement pour :</mark></strong>   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>api-ms-win-core-winrt-error-l1-1-0
+</code></pre></div>
+
+
+</div>
+
+<p>Ajouter, puis Modifier et <mark class="formatting_highlight"><strong>Désactiver</strong></mark>   </p>
+<p>Installer Adobe DNG (modifier le chemin si la version a évolué)   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>WINEPREFIX=&quot;$HOME/wine-dng&quot; wine ~/Téléchargements/AdobeDNGConverter_x64_15_1_1.exe
+</code></pre></div>
+
+
+</div>
+
+<p>À la fin de l'installation sur <strong><mark class="formatting_highlight">Lancer Adobe DNG Converter</mark></strong> pour vérifier que tout s'est bien passé. Si le logiciel s'ouvre correctement   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="nv">echo</span><span class="w"> </span><span class="s2">&quot;alias dng=&#39;WINEPREFIX=\&quot;</span>\$<span class="nv">HOME</span><span class="o">/</span><span class="nv">wine</span><span class="o">-</span><span class="nv">dng</span>\<span class="s2">&quot; wine \&quot;</span>\$<span class="nv">HOME</span><span class="o">/</span><span class="nv">wine</span><span class="o">-</span><span class="nv">dng</span><span class="o">/</span><span class="nv">drive_c</span><span class="o">/</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="o">/</span><span class="nv">Adobe</span><span class="o">/</span><span class="nv">Adobe</span><span class="w"> </span><span class="nv">DNG</span><span class="w"> </span><span class="nv">Converter</span><span class="o">/</span><span class="nv">Adobe</span><span class="w"> </span><span class="nv">DNG</span><span class="w"> </span><span class="nv">Converter</span>.<span class="nv">exe</span>\<span class="s2">&quot;&#39;&quot;</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">~/</span>.<span class="nv">bashrc</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="nv">bash</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">Pour</span><span class="w"> </span><span class="n">ouvrir</span><span class="w"> </span><span class="n">Adobe</span><span class="w"> </span><span class="n">DNG</span><span class="w"> </span><span class="n">Converter</span><span class="p">,</span><span class="w"> </span><span class="n">taper</span><span class="w"> </span><span class="n">dans</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">console</span><span class="w"> </span><span class="n n-Quoted">`dng`</span><span class="w"></span>
+</code></pre></div></div>
 <div class="note-footer">
-<div class="backlinks" style="display:none"></div>
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/minihub/index.html">index</a></li>
+</ul>
+</div>
 
 <div class="tags">
 
@@ -253,13 +399,13 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A172218627734652408872714573008666696241{level}" class="graph_div"></div>
+    <div id="A142832380000411891508940048902955186960{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B172218627734652408872714573008666696241{level}" level="{level}" note_temp_id="172218627734652408872714573008666696241" onclick="window.ObsHtmlGraph.run(this, '172218627734652408872714573008666696241', 'index');">
+        <button class="graph_button graph_show_button" id="B142832380000411891508940048902955186960{level}" level="{level}" note_temp_id="142832380000411891508940048902955186960" onclick="window.ObsHtmlGraph.run(this, '142832380000411891508940048902955186960', 'installation wine + adobe dng converter');">
             Afficher le Graph
         </button>
-        <button class="graph_button graph_type_button" id="C172218627734652408872714573008666696241{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C142832380000411891508940048902955186960{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
@@ -275,7 +421,7 @@
 </script>
 
 
-
+{_obsidian_html_node_id_pattern_:installation wine + adobe dng converter}
 
                                 <!-- end content -->
                         </div>
