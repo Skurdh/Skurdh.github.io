@@ -226,6 +226,7 @@
 <li><a href="#installation-wine" class="anchor-link">Installation Wine</a><ul>
 <li><a href="#wine-est-installe-mais-avec-une-version-8-0" class="anchor-link">Wine est installé mais avec une version &lt; 8.0</a></li>
 <li><a href="#sur-ubuntu" class="anchor-link">Sur Ubuntu</a></li>
+<li><a href="#sur-debian" class="anchor-link">Sur Debian</a></li>
 </ul>
 </li>
 <li><a href="#installation-adobe-dng" class="anchor-link">Installation Adobe DNG</a></li>
@@ -265,7 +266,17 @@
 <p>Ensuite :   </p>
 <div class="lang-general">
 
-<div class="codehilite"><pre><span></span><code>rm -rf $HOME/.wine ; rm -f $HOME/.config/menus/applications-merged/*wine* ; rm -rf $HOME/.local/share/applications/wine ; rm -f $HOME/.local/share/desktop-directories/*wine* ; rm -f $HOME/.local/share/icons/*wine* ; sudo apt-get update
+<div class="codehilite"><pre><span></span><code>rm -rf $HOME/.wine
+
+rm -f $HOME/.config/menus/applications-merged/*wine*
+
+rm -rf $HOME/.local/share/applications/wine
+
+rm -f $HOME/.local/share/desktop-directories/*wine*
+
+rm -f $HOME/.local/share/icons/*wine* 
+
+sudo apt-get update
 </code></pre></div>
 
 
@@ -326,6 +337,38 @@ sudo wget -O /etc/apt/keyrings/winehq-archive.key [https://dl.winehq.org/wine-bu
 
 </div>
 
+<h3 id="sur-debian">Sur Debian</h3>
+<p>Activer le mode 32 bit   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo dpkg --add-architecture i386
+</code></pre></div>
+
+
+</div>
+
+<p>Créer le dépot   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo mkdir -pm755 /etc/apt/keyrings
+
+sudo wget -O /etc/apt/keyrings/winehq-archive.key [https://dl.winehq.org/wine-builds/winehq.key](https://dl.winehq.org/wine-builds/winehq.key)
+</code></pre></div>
+
+
+</div>
+
+<ul>
+<li><strong>Debian 11</strong>   </li>
+</ul>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo wget -NP /etc/apt/sources.list.d/ [https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources](https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources)
+</code></pre></div>
+
+
+</div>
+
 <p>Mettre à jour   </p>
 <div class="lang-general">
 
@@ -355,7 +398,7 @@ sudo wget -O /etc/apt/keyrings/winehq-archive.key [https://dl.winehq.org/wine-bu
 
 </div>
 
-<p>Dans Bibliothèques, copier dans <strong><mark class="formatting_highlight">Nouveau remplacement pour :</mark></strong>   </p>
+<p>Dans Bibliothèques, copier dans <strong>Nouveau remplacement pour :</strong>   </p>
 <div class="lang-general">
 
 <div class="codehilite"><pre><span></span><code>api-ms-win-core-winrt-error-l1-1-0
@@ -364,7 +407,7 @@ sudo wget -O /etc/apt/keyrings/winehq-archive.key [https://dl.winehq.org/wine-bu
 
 </div>
 
-<p>Ajouter, puis Modifier et <mark class="formatting_highlight"><strong>Désactiver</strong></mark>   </p>
+<p>Ajouter, puis Modifier et <strong>Désactiver</strong>   </p>
 <p>Installer Adobe DNG (modifier le chemin si la version a évolué)   </p>
 <div class="lang-general">
 
@@ -374,7 +417,7 @@ sudo wget -O /etc/apt/keyrings/winehq-archive.key [https://dl.winehq.org/wine-bu
 
 </div>
 
-<p>À la fin de l'installation sur <strong><mark class="formatting_highlight">Lancer Adobe DNG Converter</mark></strong> pour vérifier que tout s'est bien passé. Si le logiciel s'ouvre correctement   </p>
+<p>À la fin de l'installation sur <strong>Lancer Adobe DNG Converter</strong> pour vérifier que tout s'est bien passé. Si le logiciel s'ouvre correctement   </p>
 <div class="lang-general">
 
 <div class="codehilite"><pre><span></span><code><span class="nv">echo</span><span class="w"> </span><span class="s2">&quot;alias dng=&#39;WINEPREFIX=\&quot;</span>\$<span class="nv">HOME</span><span class="o">/</span><span class="nv">wine</span><span class="o">-</span><span class="nv">dng</span>\<span class="s2">&quot; wine \&quot;</span>\$<span class="nv">HOME</span><span class="o">/</span><span class="nv">wine</span><span class="o">-</span><span class="nv">dng</span><span class="o">/</span><span class="nv">drive_c</span><span class="o">/</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="o">/</span><span class="nv">Adobe</span><span class="o">/</span><span class="nv">Adobe</span><span class="w"> </span><span class="nv">DNG</span><span class="w"> </span><span class="nv">Converter</span><span class="o">/</span><span class="nv">Adobe</span><span class="w"> </span><span class="nv">DNG</span><span class="w"> </span><span class="nv">Converter</span>.<span class="nv">exe</span>\<span class="s2">&quot;&#39;&quot;</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">~/</span>.<span class="nv">bashrc</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="nv">bash</span><span class="w"></span>
@@ -383,8 +426,7 @@ sudo wget -O /etc/apt/keyrings/winehq-archive.key [https://dl.winehq.org/wine-bu
 
 </div>
 
-<div class="codehilite"><pre><span></span><code><span class="n">Pour</span><span class="w"> </span><span class="n">ouvrir</span><span class="w"> </span><span class="n">Adobe</span><span class="w"> </span><span class="n">DNG</span><span class="w"> </span><span class="n">Converter</span><span class="p">,</span><span class="w"> </span><span class="n">taper</span><span class="w"> </span><span class="n">dans</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">console</span><span class="w"> </span><span class="n n-Quoted">`dng`</span><span class="w"></span>
-</code></pre></div></div>
+<p>Pour ouvrir Adobe DNG Converter, taper dans la console <code>dng</code></p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -399,13 +441,13 @@ sudo wget -O /etc/apt/keyrings/winehq-archive.key [https://dl.winehq.org/wine-bu
 
 </div>
 <div class="graph requires_js ">
-    <div id="A142832380000411891508940048902955186960{level}" class="graph_div"></div>
+    <div id="A188921540144140797843668442692078080378{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B142832380000411891508940048902955186960{level}" level="{level}" note_temp_id="142832380000411891508940048902955186960" onclick="window.ObsHtmlGraph.run(this, '142832380000411891508940048902955186960', 'installation wine + adobe dng converter');">
+        <button class="graph_button graph_show_button" id="B188921540144140797843668442692078080378{level}" level="{level}" note_temp_id="188921540144140797843668442692078080378" onclick="window.ObsHtmlGraph.run(this, '188921540144140797843668442692078080378', 'installation wine + adobe dng converter');">
             Afficher le Graph
         </button>
-        <button class="graph_button graph_type_button" id="C142832380000411891508940048902955186960{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C188921540144140797843668442692078080378{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
