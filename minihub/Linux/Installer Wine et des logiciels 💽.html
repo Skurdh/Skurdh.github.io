@@ -219,6 +219,23 @@
 			<li><a class="" href="/minihub/medias/3d_lights/schema_support_pile.png"  class="external-link">schema_support_pile</a></li>
 		</ul>
 	</div>
+	<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">wine_soft_install</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="/minihub/medias/wine_soft_install">
+		<ul class="dir-list">
+			<li><a class="" href="/minihub/medias/wine_soft_install/Pasted image 20230120004710.png"  class="external-link">Pasted image 20230120004710</a></li>
+			<li><a class="" href="/minihub/medias/wine_soft_install/Pasted image 20230120005848.png"  class="external-link">Pasted image 20230120005848</a></li>
+			<li><a class="" href="/minihub/medias/wine_soft_install/Pasted image 20230120010033.png"  class="external-link">Pasted image 20230120010033</a></li>
+			<li><a class="" href="/minihub/medias/wine_soft_install/Pasted image 20230120010651.png"  class="external-link">Pasted image 20230120010651</a></li>
+			<li><a class="" href="/minihub/medias/wine_soft_install/Pasted image 20230120011407.png"  class="external-link">Pasted image 20230120011407</a></li>
+			<li><a class="" href="/minihub/medias/wine_soft_install/Pasted image 20230120022131.png"  class="external-link">Pasted image 20230120022131</a></li>
+			<li><a class="" href="/minihub/medias/wine_soft_install/Pasted image 20230120022506.png"  class="external-link">Pasted image 20230120022506</a></li>
+			<li><a class="" href="/minihub/medias/wine_soft_install/Pasted image 20230120022742.png"  class="external-link">Pasted image 20230120022742</a></li>
+			<li><a class="" href="/minihub/medias/wine_soft_install/Pasted image 20230120023742.png"  class="external-link">Pasted image 20230120023742</a></li>
+			<li><a class="" href="/minihub/medias/wine_soft_install/Pasted image 20230120024803.png"  class="external-link">Pasted image 20230120024803</a></li>
+			<li><a class="" href="/minihub/medias/wine_soft_install/wine_purge.png"  class="external-link">wine_purge</a></li>
+			<li><a class="" href="/minihub/medias/wine_soft_install/wine_uninstaller.jpg"  class="external-link">wine_uninstaller</a></li>
+		</ul>
+	</div>
 	<ul class="dir-list">
 	</ul>
 </div>
@@ -236,9 +253,470 @@
                         <a href="/minihub/" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">Linux</span> / <a href="/minihub/Linux/Installer Wine et des logiciels 💽.html" >Installer Wine et des logiciels 💽</a>
                     </div>
                 </div>
-<div class="content"><div class="toc">
-<ul></ul>
-</div></div>
+<div class="content"><div class="title">Installer Wine et des logiciels 💽</div>
+
+<div class="codehilite"><pre><span></span><code>
+</code></pre></div>
+
+<p><br>   </p>
+<h1 id="installation-wine">Installation Wine</h1>
+<div class="toc">
+<ul>
+<li><a href="#installation-wine" class="anchor-link">Installation Wine</a><ul>
+<li><a href="#reinstallation-de-wine" class="anchor-link">Réinstallation de WINE</a><ul>
+<li><a href="#ne-pas-perdre-les-logiciels-installes" class="anchor-link">Ne pas perdre les logiciels installés</a></li>
+<li><a href="#desinstallation-de-wine" class="anchor-link">Désinstallation de WINE</a></li>
+<li><a href="#installation-de-wine" class="anchor-link">Installation de WINE</a><ul>
+<li><a href="#avec-ubuntu" class="anchor-link">Avec Ubuntu</a></li>
+</ul>
+</li>
+<li><a href="#sur-debian" class="anchor-link">Sur Debian</a></li>
+<li><a href="#commun" class="anchor-link">Commun</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#installation-des-logiciels" class="anchor-link">Installation des logiciels</a><ul>
+<li><a href="#configuration" class="anchor-link">Configuration</a><ul>
+<li><a href="#installer-un-logiciel" class="anchor-link">Installer un logiciel</a></li>
+<li><a href="#lancer-le-logiciel" class="anchor-link">Lancer le logiciel</a></li>
+<li><a href="#creer-un-raccourci" class="anchor-link">Créer un raccourci</a><ul>
+<li><a href="#alias" class="anchor-link">Alias</a></li>
+<li><a href="#ajouter-au-favori" class="anchor-link">Ajouter au favori</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#ajouter-un-logiciel-au-menu-ouvrir-avec-une-autre-application" class="anchor-link">Ajouter un logiciel au menu Ouvrir avec une autre application</a><ul>
+<li><a href="#explication" class="anchor-link">Explication</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Tout d'abord, vérifiez si Wine est installé sur la machine et sa version.    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>wine --version
+</code></pre></div>
+
+
+</div>
+
+<p>Wine doit être installé en <code>wine-8.0-rc4</code> <em>(ou supérieur)</em>. Si c'est déjà le cas, allez au chapitre suivant.    </p>
+<p><br>   </p>
+<h2 id="reinstallation-de-wine">Réinstallation de WINE</h2>
+<h3 id="ne-pas-perdre-les-logiciels-installes">Ne pas perdre les logiciels installés</h3>
+<p>Avant de désinstaller WINE, vérifiez les logiciels installés pour pouvoir les noter et réinstaller par la suite.    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>wine uninstaller
+</code></pre></div>
+
+
+</div>
+
+<p>Cette commande va ouvrir un gestionnaire de logiciels. <em>Pas besoin de désinstaller manuellement les logiciels!</em>    </p>
+<p><img alt="" src="/minihub/medias/wine_soft_install/wine_uninstaller.jpg" />   </p>
+<h3 id="desinstallation-de-wine">Désinstallation de WINE</h3>
+<p>Pour le désinstaller correctement, il faut connaitre le nom du paquet installé. Essayez cette commande :    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo apt-get --purge remove wine 
+</code></pre></div>
+
+
+</div>
+
+<p>Si vous avez ce <mark class="formatting_highlight">message</mark>, il faut chercher le nom du paquet.    </p>
+<p><img alt="" src="/minihub/medias/wine_soft_install/wine_purge.png" />   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code> apt list | grep wine 
+</code></pre></div>
+
+
+</div>
+
+<p>Maintenant il faut chercher le ou les paquets avec <code>[installé]</code> à la fin <em>(ignorez les <code>[installé, automatique]</code></em>. Par exemple, si vous avez cette ligne :    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="n">winehq</span><span class="o">-</span><span class="n">stable</span><span class="o">/</span><span class="n">jammy</span><span class="w"> </span><span class="mf">7.0.1</span><span class="o">~</span><span class="n">jammy</span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="n">amd64</span><span class="w"> </span><span class="o">[</span><span class="n">installé</span><span class="o">]</span><span class="w"> </span>
+</code></pre></div>
+
+
+</div>
+
+<p>Il suffit d'entrer :    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo apt-get --purge remove winehq-stable
+</code></pre></div>
+
+
+</div>
+
+<p>Une fois que la désinstallation de Wine s'est bien effectuée :    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo apt-get autoremove
+</code></pre></div>
+
+
+</div>
+
+<p>Puis supprimer les dossiers que Wine a crée sur votre machine avec :    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>rm -rf $HOME/.wine; rm -f $HOME/.config/menus/applications-merged/*wine*; rm -rf
+$HOME/.local/share/applications/wine; rm -f $HOME/.local/share/desktopdirectories/*
+wine*; rm -f $HOME/.local/share/icons/*wine*; sudo apt-get update
+</code></pre></div>
+
+
+</div>
+
+<p><br>   </p>
+<div class="callout callout-success active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</div>
+<div class="callout-title-name">Succès débloqué <br />
+</div>
+</div>
+<div class="callout-content">
+<p>Wine est correctement désinstallé 🎉 <br />
+</p>
+</div>
+</div>
+<p><br>   </p>
+<h3 id="installation-de-wine">Installation de WINE</h3>
+<h4 id="avec-ubuntu">Avec Ubuntu</h4>
+<p>Activer le mode 32 bits sur votre machine    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo dpkg --add-architecture i386 
+</code></pre></div>
+
+
+</div>
+
+<p>Créer le dépot    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo mkdir -pm755 /etc/apt/keyrings &amp;&amp; sudo wget -O /etc/apt/keyrings/winehqarchive.key https://dl.winehq.org/wine-builds/winehq.key 
+</code></pre></div>
+
+
+</div>
+
+<p>Selon la version de Ubuntu :    </p>
+<ul>
+<li><strong>Ubuntu 22.04 / Mint 21.x</strong>   </li>
+</ul>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/winebuilds/ubuntu/dists/jammy/winehq-jammy.sources 
+</code></pre></div>
+
+
+</div>
+
+<ul>
+<li><strong>Ubuntu 20.04 / Mint 20.x </strong>   </li>
+</ul>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/winebuilds/ubuntu/dists/focal/winehq-focal.sources 
+</code></pre></div>
+
+
+</div>
+
+<ul>
+<li><strong>Ubuntu 18.04 / Mint 19.x</strong>    </li>
+</ul>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/winebuilds/
+ubuntu/dists/bionic/winehq-bionic.sources
+</code></pre></div>
+
+
+</div>
+
+<h3 id="sur-debian">Sur Debian</h3>
+<p>Activer le mode 32 bits sur votre machine    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo dpkg --add-architecture i386 
+</code></pre></div>
+
+
+</div>
+
+<p>Créer le dépot    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo mkdir -pm755 /etc/apt/keyrings &amp;&amp; sudo wget -O /etc/apt/keyrings/winehqarchive.
+key https://dl.winehq.org/wine-builds/winehq.key
+</code></pre></div>
+
+
+</div>
+
+<ul>
+<li><strong>Debian 11</strong>    </li>
+</ul>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/winebuilds/
+debian/dists/bullseye/winehq-bullseye.sources
+</code></pre></div>
+
+
+</div>
+
+<h3 id="commun">Commun</h3>
+<p>Mettre à jour et installer Wine    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo apt update; sudo apt install --install-recommends winehq-devel
+winecfg
+</code></pre></div>
+
+
+</div>
+
+<p><br>   </p>
+<div class="callout callout-success active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</div>
+<div class="callout-title-name">Succès débloqué  <br />
+</div>
+</div>
+<div class="callout-content">
+<p><strong>Wine est correctement installé 🎉</strong> # Installation des logiciels  <br />
+</p>
+</div>
+</div>
+<p><br>   </p>
+<h1 id="installation-des-logiciels">Installation des logiciels</h1>
+<h2 id="configuration">Configuration</h2>
+<p>Pour installer des logiciels, il faut dans un premier temps configurer Wine. <strong>Acceptez l'installation de Mono pour Wine.</strong>    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>winecfg 
+</code></pre></div>
+
+
+</div>
+
+<p>Cette commande va créer un <code>.wine</code>, s'il n'existe pas, dans votre dossier personnel <em>(il faut afficher les fichiers cachés)</em>. Ce dossier contient Windows et vos logiciels, comme sur un disque dur.  <br />
+Et vous permettre de le configurer. Vous pouvez utiliser cette commande à tout moment.    </p>
+<p><strong>Changez la version de Windows en Windows 10!</strong>    </p>
+<p><img alt="" src="/minihub/medias/wine_soft_install/Pasted%20image%2020230120004710.png" />   </p>
+<div class="callout callout-warning active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+</div>
+<div class="callout-title-name">Attention <br />
+</div>
+</div>
+<div class="callout-content">
+<p>Si vous comptez installer Adobe DNG Convertor, allez dans l'onglet <code>Bibliothèques</code> et ajouter : <code>api-ms-win-core-winrt-error-l1-1-0</code> <br />
+</p>
+</div>
+</div>
+<p><img alt="" src="/minihub/medias/wine_soft_install/Pasted%20image%2020230120005848.png" />   </p>
+<p>Puis <code>Modifier</code> et `Disabled    </p>
+<p><img alt="" src="/minihub/medias/wine_soft_install/Pasted%20image%2020230120010033.png" />   </p>
+<p>Appliquez et validez!    </p>
+<h3 id="installer-un-logiciel">Installer un logiciel</h3>
+<p>Après avoir téléchargé l'exécutable Windows du logiciel, vous pouvez l'installer avec la commande : <code>wine</code> suivi du chemin vers l'installateur. Par exemple :    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>wine $HOME/Téléchargements/FSViewerSetup.exe 
+</code></pre></div>
+
+
+</div>
+
+<div class="callout callout-tip active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"></path></svg>
+</div>
+<div class="callout-title-name">Tip
+</div>
+</div>
+<div class="callout-content">
+<p><strong>$HOME est un raccourci qui équivaut à <code>/home/utilisateur/</code>, le chemin de votre dossier personnel</strong>  <br />
+</p>
+</div>
+</div>
+<p>L'installateur Windows se lance.    </p>
+<p><img alt="" src="/minihub/medias/wine_soft_install/Pasted%20image%2020230120010651.png" />   </p>
+<h3 id="lancer-le-logiciel">Lancer le logiciel</h3>
+<p>Pour lancer un logiciel, la commande est la même, <code>wine</code> mais suivi du chemin de l'exécutable du logiciel. Il se trouve forcément dans votre dossier <code>.wine</code>. Par exemple pour FastStone :    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>wine &quot;$HOME/.wine/drive_c/Program Files (x86)/FastStone Image
+Viewer/FSViewer.exe&quot;
+</code></pre></div>
+
+
+</div>
+
+<div class="callout callout-warning active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+</div>
+<div class="callout-title-name">Attention <br />
+</div>
+</div>
+<div class="callout-content">
+<p><strong>N'oubliez pas les guillemets <code>"chemin"</code>, ça ne fonctionnera pas sans car le chemin contient des espaces!</strong>  <br />
+</p>
+</div>
+</div>
+<h3 id="creer-un-raccourci">Créer un raccourci</h3>
+<h4 id="alias">Alias</h4>
+<p>Un alias est un raccourci commande. Pour en créer un il faut écrire <code>echo "alias &lt;nom du raccourci&gt;='&lt;commande&gt;'" &gt;&gt; ~/.bashrc &amp;&amp; exec bash</code>.    </p>
+<p>Par exemple pour Adobe DNG, avec comme raccourci <code>dng</code> :    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="nv">echo</span><span class="w"> </span><span class="s2">&quot;alias dng=&#39;wine \&quot;</span>\$<span class="nv">HOME</span><span class="o">/</span><span class="nv">wine</span><span class="o">-</span><span class="nv">dng</span><span class="o">/</span><span class="nv">drive_c</span><span class="o">/</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="o">/</span><span class="nv">Adobe</span><span class="o">/</span><span class="nv">Adobe</span><span class="w"> </span><span class="nv">DNG</span><span class="w"> </span><span class="nv">Converter</span><span class="o">/</span><span class="nv">Adobe</span><span class="w"> </span><span class="nv">DNG</span><span class="w"> </span><span class="nv">Converter</span>.<span class="nv">exe</span>\<span class="s2">&quot;&#39;&quot;</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">~/</span>.<span class="nv">bashrc</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="nv">bash</span><span class="w"> </span>
+</code></pre></div>
+
+
+</div>
+
+<div class="callout callout-warning active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+</div>
+<div class="callout-title-name">Attention <br />
+</div>
+</div>
+<div class="callout-content">
+<p><strong>Si vous utilisez <code>"</code> dans votre commande, pensez à mettre un anti-slash devant <code>\"</code>, ça désactive la fonctionnalité du caractère par la console.</strong>  <br />
+</p>
+</div>
+</div>
+<h4 id="ajouter-au-favori">Ajouter au favori</h4>
+<p>Très simple, ouvrez le logiciel avec la commande ci dessus et clic droit sur l'icone dans le <strong>Doc</strong> puis <code>Ajouter au favori</code>.    </p>
+<p><img alt="" src="/minihub/medias/wine_soft_install/Pasted%20image%2020230120011407.png" />   </p>
+<p><br>   </p>
+<div class="callout callout-success active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</div>
+<div class="callout-title-name">Succès débloqué <br />
+</div>
+</div>
+<div class="callout-content">
+<p>Vous savez configurer Wine et installer des logiciels ! 🎉 <br />
+</p>
+</div>
+</div>
+<p><br>   </p>
+<h1 id="ajouter-un-logiciel-au-menu-ouvrir-avec-une-autre-application">Ajouter un logiciel au menu <code>Ouvrir avec une autre application</code></h1>
+<div class="callout callout-warning active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+</div>
+<div class="callout-title-name">Attention <br />
+</div>
+</div>
+<div class="callout-content">
+<p>N'oubliez pas d'activer les fichiers cachés dans votre dossier personnel. <br />
+<img alt="" src="/minihub/medias/wine_soft_install/Pasted%20image%2020230120022131.png" /> <br />
+</p>
+</div>
+</div>
+<p>Ouvrez l'éditeur de texte et copiez ce code, cela va créer un raccourci pour FastStone Viewer :    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="k">[Desktop Entry]</span><span class="w"></span>
+<span class="na">Name</span><span class="o">=</span><span class="s">FastStone Image Viewer</span><span class="w"></span>
+<span class="na">Exec</span><span class="o">=</span><span class="s">env wine &quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\FastStone</span><span class="w"></span>
+<span class="na">Image Viewer\FastStone Image Viewer.lnk&quot; %f</span><span class="w"></span>
+<span class="na">Type</span><span class="o">=</span><span class="s">Application</span><span class="w"></span>
+<span class="na">Icon</span><span class="o">=</span><span class="s">7F5C_FSViewer.0</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<p>Puis enregistrez le dans <code>Dossier personnel</code> &gt; <code>.local</code> &gt; <code>share</code> &gt; <code>applications</code>. Le nom du fichier importe peu tant qu'il termine par <strong><code>.desktop</code></strong>!    </p>
+<p><img alt="" src="/minihub/medias/wine_soft_install/Pasted%20image%2020230120022506.png" />   </p>
+<p>Il ne reste plus qu'à faire un clic droit sur une image, puis <code>Propriétés</code> et <code>Ouvrir avec</code>, choisir FastStone et le <strong>Définir par défaut</strong>!    </p>
+<p><img alt="" src="/minihub/medias/wine_soft_install/Pasted%20image%2020230120022742.png" />   </p>
+<div class="callout callout-tip active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"></path></svg>
+</div>
+<div class="callout-title-name">Tip
+</div>
+</div>
+<div class="callout-content">
+<p>Vous n'aurez plus qu'à le faire <strong>une seule fois</strong> avec chaque extension, .JPG, .PNG, .RAW, .DNG.  <br />
+</p>
+</div>
+</div>
+<h2 id="explication">Explication</h2>
+<p>Pour créer d'autres raccourcis, il suffit de remplir ce modèle :    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="k">[Desktop Entry]</span><span class="w"></span>
+<span class="na">Name</span><span class="o">=</span><span class="w"></span>
+<span class="na">Exec</span><span class="o">=</span><span class="w"></span>
+<span class="na">Type</span><span class="o">=</span><span class="s">Application</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<ul>
+<li><code>Name=</code> est le nom du raccourci qui va apparaitre dans le menu Ouvrir avec.   </li>
+<li><code>Exec=</code> est le chemin vers le logiciel. Comme nous utilisons wine, il faudra écrire : <code>env wine</code> + chemin vers le raccourci du logiciel + <code>%f</code> <strong>(Attention à ne pas l'oublier)</strong>. <br />
+Il se trouve dans <code>wine/drive_c/ProgramData/Microsoft/Windows/Start Menu/Programs/</code>   </li>
+</ul>
+<p><img alt="" src="/minihub/medias/wine_soft_install/Pasted%20image%2020230120023742.png" />   </p>
+<p>Ici nous avons le raccourci pour AdobeDNG.lnk <em>(LNK)</em> ce qui nous donnera :    </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>env wine &quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Adobe DNG Converter.lnk&quot; 
+</code></pre></div>
+
+
+</div>
+
+<div class="callout callout-example active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+</div>
+<div class="callout-title-name">Fichier complet  <br />
+</div>
+</div>
+<div class="callout-content"></div>
+</div>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="k">[Desktop Entry]</span><span class="w"></span>
+<span class="na">Name</span><span class="o">=</span><span class="s">Adobe DNG</span><span class="w"></span>
+<span class="na">Exec</span><span class="o">=</span><span class="s">env wine &quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Adobe DNG</span><span class="w"></span>
+<span class="na">Converter.lnk&quot; %f</span><span class="w"></span>
+<span class="na">Type</span><span class="o">=</span><span class="s">Application</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<p>Voila le résultat:    </p>
+<p><img alt="" src="/minihub/medias/wine_soft_install/Pasted%20image%2020230120024803.png" /></p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -253,13 +731,13 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A326264550775539327094447133694343845057{level}" class="graph_div"></div>
+    <div id="A317574452719261228731407162740483398871{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B326264550775539327094447133694343845057{level}" level="{level}" note_temp_id="326264550775539327094447133694343845057" onclick="window.ObsHtmlGraph.run(this, '326264550775539327094447133694343845057', 'installer wine et des logiciels 💽');">
+        <button class="graph_button graph_show_button" id="B317574452719261228731407162740483398871{level}" level="{level}" note_temp_id="317574452719261228731407162740483398871" onclick="window.ObsHtmlGraph.run(this, '317574452719261228731407162740483398871', 'installer wine et des logiciels 💽');">
             Afficher le Graph
         </button>
-        <button class="graph_button graph_type_button" id="C326264550775539327094447133694343845057{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C317574452719261228731407162740483398871{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
