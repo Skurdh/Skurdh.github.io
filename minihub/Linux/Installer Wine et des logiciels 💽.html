@@ -261,7 +261,18 @@
 
 </div>
 
-<p>Wine doit être installé en <code>wine-8.0-rc4</code> <em>(ou supérieur)</em>. Si c'est déjà le cas, allez au chapitre suivant.    </p>
+<div class="callout callout-warning active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+</div>
+<div class="callout-title-name">Vous comptez installer Adobe DNG Converter &gt; 15.0 ? <br />
+</div>
+</div>
+<div class="callout-content">
+<p>Wine doit être installé en <code>wine-8.0-rc4</code> <em>(ou supérieur)</em>. Si c'est déjà le cas, allez au chapitre suivant. <br />
+</p>
+</div>
+</div>
 <p><br>   </p>
 <h2 id="reinstallation-de-wine">Réinstallation de WINE</h2>
 <h3 id="ne-pas-perdre-les-logiciels-installes">Ne pas perdre les logiciels installés</h3>
@@ -439,8 +450,16 @@ debian/dists/bullseye/winehq-bullseye.sources
 <p>Mettre à jour et installer Wine    </p>
 <div class="lang-general">
 
+<div class="codehilite"><pre><span></span><code>sudo apt update; sudo apt install --install-recommends winehq-stable
+</code></pre></div>
+
+
+</div>
+
+<p><mark class="formatting_highlight">Pour Adobe DNG Converter</mark>, utilisez cette commande :   </p>
+<div class="lang-general">
+
 <div class="codehilite"><pre><span></span><code>sudo apt update; sudo apt install --install-recommends winehq-devel
-winecfg
 </code></pre></div>
 
 
@@ -688,13 +707,13 @@ Il se trouve dans <code>wine/drive_c/ProgramData/Microsoft/Windows/Start Menu/Pr
 
 </div>
 <div class="graph requires_js ">
-    <div id="A225281173092900373804136740640710893498{level}" class="graph_div"></div>
+    <div id="A265550579602297366352138464568825541937{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B225281173092900373804136740640710893498{level}" level="{level}" note_temp_id="225281173092900373804136740640710893498" onclick="window.ObsHtmlGraph.run(this, '225281173092900373804136740640710893498', 'installer wine et des logiciels 💽');">
+        <button class="graph_button graph_show_button" id="B265550579602297366352138464568825541937{level}" level="{level}" note_temp_id="265550579602297366352138464568825541937" onclick="window.ObsHtmlGraph.run(this, '265550579602297366352138464568825541937', 'installer wine et des logiciels 💽');">
             Afficher le Graph
         </button>
-        <button class="graph_button graph_type_button" id="C225281173092900373804136740640710893498{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C265550579602297366352138464568825541937{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
