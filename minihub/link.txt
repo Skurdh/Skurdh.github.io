@@ -8,3 +8,12 @@
 
 - http://download.ebz.epson.net/dsc/search/01/search/searchModule
 - Paquet `lsb`
+
+# Mise à jour
+
+- apt update, dist-upgrade, update, autoremove
+- du -sh ~/.cache/thumbnails -> rm ~/.cache/thumbnails/* ??????
+- du -sh /var/vache/apt -> apt autoclean / clean
+
+- sudo apt install update-manager-core
+- sudo do-release-upgrade
