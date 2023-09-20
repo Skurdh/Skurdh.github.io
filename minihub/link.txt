@@ -9,6 +9,13 @@
 - http://download.ebz.epson.net/dsc/search/01/search/searchModule
 - Paquet `lsb`
 
+# Sauvegarde 
+
+- apt install deja-dup
+- Faire la sauvegarde des fichiers 
+  - Mozilla > /home/user/snap
+  - Thunderbird > /home/user/.thunderbird/
+
 # Mise à jour
 
 - apt update, dist-upgrade, update, autoremove
