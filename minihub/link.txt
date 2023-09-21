@@ -18,6 +18,9 @@
 
 # Mise à jour
 
+voir la version : lsb_release -a
+
+- apt list –upgradable
 - apt update, dist-upgrade, update, autoremove
 - du -sh ~/.cache/thumbnails -> rm ~/.cache/thumbnails/* ??????
 - du -sh /var/vache/apt -> apt autoclean / clean
