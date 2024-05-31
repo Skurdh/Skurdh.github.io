@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Button webhook</title>
+    <script>
+      const action1 = "http://localhost:5678/webhook-test/3cf24b6a-22c6-4c5e-a1c2-efec450193d2";
+      // Simple example of a webhook with empty payload.
+      const button1 = document.getElementById("button1");
+      button1.addEventListener("click", function () {
+      fetch(action1, { method: "POST" })
+        .then(response => {
+          console.log("Action 1 triggered on device");
+        })
+        .catch(error => {
+          console.error("Error triggering action 1 on device:", error);
+        });
+      });
+    </script> 
+  </head>
+  <body>
+    <button id="button1">Webhook trigger</button>
+  </body>
+</html>
