@@ -6,20 +6,12 @@
   </head>
   <body>
     <button onclick="navigate()" type="button">Ouvre une étape _blank</button>
-    <button onclick="navigate2()" type="button">Ouvre une étape _self</button>
-    <button onclick="navigate3()" type="button">Ouvre une étape _top</button>
     <button onclick="navigate4()" type="button">Ouvre une étape _unfencedTop</button>
     <p id="navigator"></p>
     <script>
       document.getElementById("navigator").innerHTML = window.navigator.appCodeName;
       function navigate() {
         window.open("notion://www.notion.so/skraft/Page-R-unions-a01ccc7f8bf04c2abf8d6cfe6e86de3f?pvs=25", "_blank").focus();
-      }
-      function navigate2() {
-        window.open("notion://www.notion.so/skraft/Page-R-unions-a01ccc7f8bf04c2abf8d6cfe6e86de3f?pvs=25", "_self").focus();
-      }
-      function navigate3() {
-        window.open("notion://www.notion.so/skraft/Page-R-unions-a01ccc7f8bf04c2abf8d6cfe6e86de3f?pvs=25", "_top").focus();
       }
       function navigate4() {
         window.open("notion://www.notion.so/skraft/Page-R-unions-a01ccc7f8bf04c2abf8d6cfe6e86de3f?pvs=25", "_unfencedTop").focus();
