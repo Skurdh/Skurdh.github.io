@@ -8,7 +8,6 @@
     <button onclick="navigate()" type="button">Ouvre une étape _blank</button>
     <button onclick="navigate4()" type="button">Ouvre une étape _unfencedTop</button>
     <button onclick="navigate2()" type="button">Ouvre une étape onglet _blank</button>
-    <button onclick="navigate3()" type="button">Ouvre une étape onglet _unfencedTop</button>
     <p id="navigator"></p>
     <script>
       document.getElementById("navigator").innerHTML = window.navigator.appCodeName;
@@ -19,16 +18,8 @@
         window.open("notion://www.notion.so/skraft/Page-R-unions-a01ccc7f8bf04c2abf8d6cfe6e86de3f?pvs=25", "_unfencedTop");
       }
       function navigate2() {
-        window.open("notion://notion.so/skraft/e950dd55c26f4fa1bec86bb8916bfd46?v=bde9e4a3c9304daaaaba6c557cb0f4a1&p=a01ccc7f8bf04c2abf8d6cfe6e86de3f&pm=s", "_blank").focus();
+        window.open("https://notion.so/skraft/e950dd55c26f4fa1bec86bb8916bfd46?v=bde9e4a3c9304daaaaba6c557cb0f4a1&p=a01ccc7f8bf04c2abf8d6cfe6e86de3f&pm=s", "_blank").focus();
       }
-      function navigate3() {
-        window.open("notion://notion.so/skraft/e950dd55c26f4fa1bec86bb8916bfd46?v=bde9e4a3c9304daaaaba6c557cb0f4a1&p=a01ccc7f8bf04c2abf8d6cfe6e86de3f&pm=s", "_parent").focus();
-      }
-
-
-
-
-      
     </script>
   </body>
 </html>
