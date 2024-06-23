@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de création d'esapce</title>
+    <link href="nice-forms.css" rel="stylesheet" >
+    <link href="notion-style.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <style>
+        .nice-form-group {
+            --nf-input-size: 0.9rem;
+            --nf-input-background-color: #252525;
+            --nf-input-border-color: #404040;
+            --nf-label-font-weight: 600;
+            --nf-label-color: #D4D4D4;
+            --nf-input-color: #D4D4D4;
+            --nf-label-font-family: sans-serif;
+            --nf-valid-input-color: #f0f0f0;
+            --nf-valid-input-border-bottom-color: #2d9964;
+            --nf-invalid-input-border-bottom-color: #CD4945;
+            --nf-input-focus-border-color: #2e7cd1;
+        }
+
+        *, :after, :before {
+            box-sizing: inherit;
+        }
+
+        html {
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #191919;
+            color: #D4D4D4;
+            margin: 0 auto;
+        }
+
+        section {
+            margin: 1rem;
+            background-color: #252525;
+            padding: 2em;
+            border-radius: .75rem;
+            overflow: hidden;
+            font-size: 0.875rem;
+            box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)
+        }
+
+        section>h1 {
+            font-size: 1.25rem;
+            line-height: 1rem;
+        }
+
+        section>h1>img {
+            display: inline-block;
+            vertical-align: -40%;
+            width: 1.5em;
+            height: 1.5em;
+        }
+        
+        section>hr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+            height: 1px;
+        }
+
+        section>.footer {
+            margin-top: 2em;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        section>.footer>.info {
+            color: #CD4945;
+            font-weight: 600;
+            font-size: 1em;
+            visibility: hidden;
+        }
+
+        section>.footer>.info>img {
+            display: inline-block;
+            vertical-align: -27%;
+            width: 1.5em;
+            height: 1.5em;
+        }
+
+        section>.footer>.info {
+            color: #CD4945;
+        }
+
+        .nice-form-group>section>H1 {
+            color: var(--nf-label-color)
+        }
+        
+
+        .nice-form-group>small {
+            color: #9B9B9B;
+        }
+
+        .nice-form-group>input {
+            height: auto !important;
+        }
+
+        .nice-form-group>select {
+            color: #9B9B9B;
+        }
+
+        .nice-form-group>select {
+            color: #9B9B9B;
+        }
+
+        .nice-form-group>select>option:enabled{
+            color: #D4D4D4;
+        }
+
+        .invalid {
+            background-color:var(--nf-invalid-input-background-color) !important;
+            border-bottom-color:var(--nf-valid-input-border-color) !important;
+            border-color:var(--nf-valid-input-border-color) var(--nf-valid-input-border-color) var(--nf-invalid-input-border-bottom-color) !important;
+            color:var(--nf-invalid-input-color) !important;
+        }
+
+        .valid {
+            background-color:var(--nf-valid-input-background-color) !important;
+            border-bottom-color:var(--nf-valid-input-border-color) !important;
+            border-color:var(--nf-valid-input-border-color) var(--nf-valid-input-border-color) var(--nf-valid-input-border-bottom-color) !important;
+        }
+
+        .loader {
+            width: 32px;
+            height: 32px;
+            border: 5px solid #5A5A5A;
+            border-radius: 50%;
+            display: block;
+            margin: 0% auto;
+        }
+
+        .loader > .loader-spinner {
+            width: 32px;
+            height: 32px;
+            border: 5px solid #2e7cd1;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            margin-top: -5px;
+            margin-left: -5px; 
+            animation: rotation 1s linear infinite;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .checkmark__circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: #2d9964;
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+        .checkmark {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: #fff;
+            stroke-miterlimit: 10;
+            margin: 0% auto;
+            box-shadow: inset 0px 0px 0px #2d9964;
+            animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+        }
+        .checkmark__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        }
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+        @keyframes scale {
+            0%,
+            100% {
+                transform: none;
+            }
+            50% {
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
+        @keyframes fill {
+            100% {
+                box-shadow: inset 0px 0px 0px 30px #2d9964;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="form">
+        <h1>
+            <img src="https://www.notion.so/icons/pentagon-dashed_gray.svg?mode=dark">
+            Titre
+        </h1>
+        <hr class="solid">
+
+        <form action="" method="get" name="space-creation">
+            <div class="nice-form-group">
+                <label>Nom</label>
+                <input type="text" placeholder="Le nom de l'espace" name="space-name" required/>
+            </div>
+            
+            <div class="nice-form-group">
+                <label>Lien</label>
+                <small>Raccourci pour copier le lien depuis Notion : Ctrl + L </small>
+                <input type="url" placeholder="Lien Notion" class="icon-left" name="space-url" required/>
+            </div>
+            
+            <div class="nice-form-group">
+                <label>Type</label>
+                <select name="space-type" onchange="onChange(this);" class="required">
+                <option value="" selected="true" disabled="true">Sélectionner un type</option>
+                <option>Outil</option>
+                <option>Entreprise</option>
+                <option>Projet</option>
+                <option>Produit</option>
+                </select>
+            </div>
+
+            <div class="nice-form-group">
+                <label>Département</label>
+                <select name="space-departement" onchange="onChange(this);" class="required">
+                <option value="" selected="true" disabled>Sélectionner un département</option>
+                <option>Gestion d'entreprise</option>
+                <option>Vente et Marketing</option>
+                <option>Comptabilité et Finances</option>
+                <option>Ressources humaines</option>
+                <option>Service client</option>
+                <option>IT</option>
+                <option>Recherche et développement</option>
+                <option>Production</option>
+                </select>
+            </div>
+
+            <div class="nice-form-group">
+                <label>Responsable</label>
+                <select name="space-responsable" onchange="onChange(this);" class="required">
+                    <option value="" selected="true" disabled>Sélectionner un responsable</option>
+                    <option>Sku</option>
+                    <option>Solkae</option>
+                </select>
+            </div>
+        </form>
+
+        <div class="footer">
+            <div class="info" id="info">
+                <img id="icon" src="https://www.notion.so/icons/warning_red.svg?mode=dark">
+                <span id="info-msg">Erreur</span>
+            </div>
+
+            <div style="margin-left: auto;">
+                <button name="button" onclick="validateForm()" type="button" class="notion-button" id="button">
+                    <img src="https://www.notion.so/icons/add_gray.svg?mode=dark" style="display: block; object-fit: cover; border-radius: 4px; width: 20px; height: 20px; transition: opacity 100ms ease-out 0s;">
+                    Créer
+                </button>
+    
+                <div id="loader" class="loader" style="display: none;"><div class="loader-spinner"></div></div>
+
+                <div id="success" style="display: none;">
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    
+
+    
+      
+
+    <script>
+        const form = document.forms["space-creation"];
+        const re = RegExp(/^https:\/\/(?:w{3}.)?notion.so\/{1}[a-z\-]+\/{1}(?:[a-zA-Z0-9\-]+-{1})?[a-fA-F0-9]{32}[?]?(?:[a-z]+={1}[a-fA-F0-9]*&?)*/);
+
+        Array.from(form.elements).forEach(item => {
+            item.value = "";
+            item.addEventListener("click", event => {
+                item.classList.remove("invalid");
+            });
+            item.addEventListener("blur", event => {
+                if (item.value == "") {
+                    item.classList.add("invalid");
+                }
+            })
+        });
+
+        form["space-url"].addEventListener("input", event => {
+            if (event.target.value.match(re) == null) {
+                event.target.classList.remove("valid");
+                event.target.classList.add("invalid");
+            } else {
+                event.target.classList.remove("invalid");
+                event.target.classList.add("valid");
+            }
+        });
+
+        function validateForm() {
+            let error = [];
+
+            Array.from(form.elements).forEach(item => {
+                
+                if (item.value == "") {
+                    item.classList.add("invalid");
+                    if (error.length == 0) { error.push("Veulliez remplir les champs invalides."); }
+                }
+            });
+            
+            if (form["space-url"].value.match(re) == null) {
+                error.push("Le lien Notion n'est pas valide.")
+            }
+
+            if (error.length > 0) {
+                pushMsg(error[0]);
+            } else {
+                var request = new XMLHttpRequest();
+                request.open("POST", "http://localhost:5678/webhook/4c803e6c-a963-4597-842c-f334e7c8add2");
+                hideMsg();
+
+                document.getElementById("button").style.display = "none";
+                document.getElementById("loader").style.display = "block";
+
+                request.setRequestHeader("Content-type", "application/json");
+                
+                request.onload = function() {
+                    document.getElementById("loader").style.display = "none";
+                    const response = JSON.parse(request.response);
+
+                    if ("type" in response) {
+                        if (request.status == 400 && request.response.type == "invalid_request") {
+                            pushMsg(response.msg);
+                        } else if (request.status == 404) {
+                            pushMsg(response.msg);
+                            document.getElementById("button").style.display = "block";   
+                        } else if (request.status == 200 && response.type == "database_created") {
+                            pushMsg(response.msg, 1);
+                            document.getElementById("success").style.display = "block";
+                        }
+                    }                    
+                }
+
+                var params = {
+                    "name": form["space-name"].value,
+                    "url": form["space-url"].value,
+                    "type": form["space-type"].value,
+                    "departement": form["space-departement"].value,
+                    "responsable": form["space-responsable"].value
+                };
+
+                request.send(JSON.stringify(params));
+            }
+        }
+
+        function onChange(select) {
+            if (select.value != "") {
+                select.classList.remove("invalid");
+                select.classList.add("valid");
+            }
+        }
+
+        function pushMsg(msg, type=0) {
+            document.getElementById("icon").style.display = (type == 1) ? "none" : "block-inline";
+            document.getElementById("info-msg").style.color = (type == 1) ? "#2d9964" : "#CD4945";
+            document.getElementById("info-msg").innerText = msg;
+            document.getElementById("info").style.visibility = "visible";
+        }
+
+        function hideMsg() {
+            document.getElementById("info").style.visibility = "hidden";
+        }
+
+
+    </script>
+      
+</body>
+</html>
