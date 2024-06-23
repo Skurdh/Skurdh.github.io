@@ -1,0 +1,21 @@
+.notion-button {
+    transition: background 20ms ease-in 0s; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 4px; 
+    height: 32px; 
+    font-size: 13px; 
+    border: 1px solid rgba(255, 255, 255, 0.13); 
+    gap: 6px;
+    padding-inline: 10px;
+    font-weight: 600; 
+    font-family: sans-serif;
+    background: rgb(20, 58, 78);
+    color: rgba(255, 255, 255, 0.81);
+}
+
+.notion-button:hover {
+    background-color: rgb(40, 69, 108)
+}
