@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouton</title>
+    <style>
+        .notion-button {
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 4px; 
+            height: 32px; 
+            font-size: 13px; 
+            border: 1px solid rgba(255, 255, 255, 0.13); 
+            gap: 6px;
+            padding-inline: 10px;
+            font-weight: 600; 
+            font-family: sans-serif;
+            background: rgba(255, 255, 255, 0);
+            color: rgba(255, 255, 255, 0.81);
+        }
+
+        .notion-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .notion-button:disabled {
+            background: rgba(255, 255, 255, 0) !important;
+            cursor: default; 
+        }
+
+        .notion-button:disabled:hover {
+            background: rgba(255, 255, 255, 0) !important;
+            cursor: default; 
+        }
+
+        .notion-default {background-color: #00000000 !important;}
+        .notion-default:hover { background-color: #2f2f2f !important; }
+        .notion-gray {background-color: #2f2f2f !important;}
+        .notion-gray:hover { background-color: #373737 !important; }
+        .notion-brown {background-color: #4a3228 !important;}
+        .notion-brown:hover { background-color: #603b2c !important; }
+        .notion-orange {background-color: #5c3b23 !important;}
+        .notion-orange:hover { background-color: #854c1d !important; }
+        .notion-yellow {background-color: #564328 !important;}
+        .notion-yellow:hover { background-color: #89632a !important; }
+        .notion-green {background: #2b593f !important;}
+        .notion-green:hover {background: #2b593f !important;}
+        .notion-blue {background: rgb(20, 58, 78) !important;}
+        .notion-blue:hover {background: rgb(40, 69, 108) !important;}
+        .notion-purple {background: #3c2d49 !important;}
+        .notion-purple:hover {background: #492f64 !important;}
+        .notion-pink {background: #4e2c3c !important;}
+        .notion-pink:hover {background: #69314c !important;}
+        .notion-red {background: #522e2a !important;}
+        .notion-red:hover {background: #6e3630 !important;}
+    </style>
+</head>
+<body>
+    <button name="button" onclick="" type="button" class="notion-button" id="button">
+        <img id="button-icon" src="https://www.notion.so/icons/cursor-button_gray.svg?mode=dark" style="display: block; object-fit: cover; border-radius: 4px; width: 20px; height: 20px; transition: opacity 100ms ease-out 0s;">
+        <span id="button-label">Bouton</span>
+    </button>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+
+        if(urlParams.has("color")) {
+            if (["default", "gray", "brown", "orange", "yellow", "green", "blue", "purple", "pink", "red"].includes(urlParams.get("color"))) {
+                document.getElementById("button").classList.add("notion-" + urlParams.get("color"));
+            }
+        }
+        if(urlParams.has("label")) {
+            document.getElementById("button-label").innerText = urlParams.get("label");
+        }
+        if(urlParams.has("icon")) {
+            document.getElementById("button-icon").setAttribute("src", "https://www.notion.so/icons/" + urlParams.get("icon") + ".svg?mode=dark");
+        }
+        if(urlParams.has("webhook")) {
+            document.getElementById("button").addEventListener("click", function () {
+                var request = new XMLHttpRequest();
+                request.open("GET", "https://" + urlParams.get("webhook"));
+                request.send();
+            })
+        }
+    </script>
+</body>
+</html>
