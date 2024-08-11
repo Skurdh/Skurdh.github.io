@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bouton</title>
     <style>
+        .center {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .notion-button {
             cursor: pointer; 
             display: flex; 
@@ -46,7 +52,7 @@
         .notion-orange:hover { background-color: #854c1d !important; }
         .notion-yellow {background-color: #564328 !important;}
         .notion-yellow:hover { background-color: #89632a !important; }
-        .notion-green {background: #2b593f !important;}
+        .notion-green {background: #243d30 !important;}
         .notion-green:hover {background: #2b593f !important;}
         .notion-blue {background: rgb(20, 58, 78) !important;}
         .notion-blue:hover {background: rgb(40, 69, 108) !important;}
@@ -59,10 +65,12 @@
     </style>
 </head>
 <body>
-    <button name="button" onclick="" type="button" class="notion-button" id="button">
-        <img id="button-icon" src="https://www.notion.so/icons/cursor-button_gray.svg?mode=dark" style="display: block; object-fit: cover; border-radius: 4px; width: 20px; height: 20px; transition: opacity 100ms ease-out 0s;">
-        <span id="button-label">Bouton</span>
-    </button>
+    <div class="center">
+        <button name="button" onclick="" type="button" class="notion-button" id="button">
+            <img id="button-icon" src="https://www.notion.so/icons/cursor-button_gray.svg?mode=dark" style="display: block; object-fit: cover; border-radius: 4px; width: 20px; height: 20px; transition: opacity 100ms ease-out 0s;">
+            <span id="button-label">Bouton</span>
+        </button>
+    </div>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
