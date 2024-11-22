@@ -1,0 +1,58 @@
+# Windows
+## Réparer le NTFS
+```
+chkdsk X: /f /r
+```
+S'il y a des erreurs, lancer la commande sur linux
+```
+ntfsfix /dev/sdX
+```
+## Désactiver démarrage rapide
+ Désactiver-le dans les paramètres d'alimentation de Windows : 
+`Panneau de configuration -> Options d'alimentation -> Choisir l'action des boutons d'alimentation -> Modifier les paramètres actuellement non disponibles -> Désactiver "Activer le démarrage rapide".`
+
+# Linux
+
+## Vérifier table GTP
+```
+sudo gdisk /dev/sdX
+```
+## Vérfier le montage NTFS
+
+```
+cat /etc/fstab
+sudo mount -t ntfs-3g -o rw,auto,relatime,big_writes,windows_names /dev/sdXn /mnt
+```
+
+## Test des performances I/O
+- Créer un gros fichier
+```
+dd if=/dev/zero of=/mnt/8to/testfile bs=1M count=10240 status=progress
+```
+- Vérifier les erreurs
+```
+sudo dmesg -w
+```
+
+## Vérifie les journaux liés à l'arrêt :
+```
+journalctl -b -1 -p err
+journalctl | grep sdX
+```
+
+
+
+## Réinstaller ntfs-3g
+```
+sudo apt remove --purge ntfs-3g
+sudo apt autoremove
+```
+
+## Logs de noyau
+```
+sudo dmesg | grep ntfs
+```
+Vérifier la précense de :
+- `ntfs_read_inode failed`
+- `Corrupt index block`
+- `Input/output error`
